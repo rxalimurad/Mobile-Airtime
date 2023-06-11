@@ -27,4 +27,33 @@ extension UserDefaults {
         }
     }
     
+    var isBiomaticOn: Bool {
+        get {
+            UserDefaults.standard.bool(forKey: "isBiomaticOn")
+        }
+        
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "isBiomaticOn")
+        }
+    }
+    var userName: String {
+        get {
+            UserDefaults.standard.string(forKey: "userName") ?? ""
+        }
+        
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "userName")
+        }
+    }
+    
+    var password: String {
+        get {
+            UserDefaults.standard.string(forKey: "password") ?? ""
+        }
+        
+        set {
+            UserDefaults.standard.setValue(newValue, forKey: "password")
+        }
+    }
+    
 }

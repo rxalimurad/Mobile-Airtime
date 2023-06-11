@@ -15,6 +15,10 @@ class ViewController: UIViewController, WKNavigationDelegate , WKUIDelegate{
     @IBOutlet private var image: UIImageView!
     @IBOutlet private var act: UIActivityIndicatorView!
     @IBOutlet private var topConst: NSLayoutConstraint!
+    
+    @IBOutlet weak var autoLogin: UIButton!
+    
+    
     let url = "https://mobileairtimeng.com/app/";
     var internetReachabilityTimer: Timer?
     let hud = JGProgressHUD()
@@ -33,14 +37,20 @@ class ViewController: UIViewController, WKNavigationDelegate , WKUIDelegate{
         backButton?.isEnabled = true
         backButton?.tintColor = .black
         }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        autoLogin.isHidden = !(UserDefaults.standard.isBiomaticOn  && !UserDefaults.standard.userName.isEmpty && !UserDefaults.standard.password.isEmpty && webKit.url == URL(string: self.url))
+    }
     override func viewDidLoad() {
+        autoLogin.isHidden = true
         super.viewDidLoad()
         hud.textLabel.text = "Loading"
         webKit.scrollView.bounces = false
         webKit.navigationDelegate = self
         webKit.isHidden = true
         webKit.allowsLinkPreview = false
-
+        
         internetReachabilityTimer = Timer.scheduledTimer(timeInterval: 5.0, target: self, selector: #selector(checkInternetConnectivity), userInfo: nil, repeats: true)
         webKit.uiDelegate = self
 
@@ -68,6 +78,9 @@ class ViewController: UIViewController, WKNavigationDelegate , WKUIDelegate{
         }
     }
     
+    @IBAction func autologinaction(_ sender: Any) {
+        self.setCredentialsInWebView(username: UserDefaults.standard.userName, password: UserDefaults.standard.password)
+    }
     @objc func checkInternetConnectivity() {
             let isInternetReachable = isInternetAvailable()
             if isInternetReachable {
@@ -102,9 +115,22 @@ class ViewController: UIViewController, WKNavigationDelegate , WKUIDelegate{
         }
 
     }
+    
+    func setCredentialsInWebView(username: String, password: String) {
+        let script = """
+        document.getElementById('uname').value = '\(username)';
+        document.getElementById('pass').value = '\(password)';
+        document.querySelector('form.user').submit();
+        """
+
+        webKit.evaluateJavaScript(script, completionHandler: nil)
+    }
+    
     func webView(_ webView: WKWebView, didFinish navigation: WKNavigation!) {
         hud.dismiss()
-        // Web page has finished loading, you can perform additional actions here
+        
+            autoLogin.isHidden = !(UserDefaults.standard.isBiomaticOn  && !UserDefaults.standard.userName.isEmpty && !UserDefaults.standard.password.isEmpty && webView.url == URL(string: self.url))
+                
         webView.evaluateJavaScript("document.title") { (result, error) in
             if let title = result as? String {
                 self.navigationController?.title = "Home"
