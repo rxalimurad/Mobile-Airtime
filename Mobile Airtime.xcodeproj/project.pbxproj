@@ -13,6 +13,12 @@
 		3C3AA8A52A34D83600862651 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3AA8A32A34D83600862651 /* Main.storyboard */; };
 		3C3AA8A72A34D83800862651 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 3C3AA8A62A34D83800862651 /* Assets.xcassets */; };
 		3C3AA8AA2A34D83800862651 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 3C3AA8A82A34D83800862651 /* LaunchScreen.storyboard */; };
+		3C3AA8B72A35126900862651 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3C3AA8B62A35126900862651 /* FirebaseAnalytics */; };
+		3C3AA8B92A35126900862651 /* FirebaseMessaging in Frameworks */ = {isa = PBXBuildFile; productRef = 3C3AA8B82A35126900862651 /* FirebaseMessaging */; };
+		3C3AA8C82A35209C00862651 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3C3AA8C72A35209C00862651 /* GoogleService-Info.plist */; };
+		3CCE2D272A35AB33009B13BC /* Settings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE2D262A35AB33009B13BC /* Settings.swift */; };
+		3CCE2D2A2A35AE14009B13BC /* JGProgressHUD in Frameworks */ = {isa = PBXBuildFile; productRef = 3CCE2D292A35AE14009B13BC /* JGProgressHUD */; };
+		3CCE2D2C2A35AF5B009B13BC /* UserDefaults.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3CCE2D2B2A35AF5B009B13BC /* UserDefaults.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +30,10 @@
 		3C3AA8A62A34D83800862651 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		3C3AA8A92A34D83800862651 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		3C3AA8AB2A34D83800862651 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3C3AA8BA2A3512F100862651 /* Mobile Airtime.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = "Mobile Airtime.entitlements"; sourceTree = "<group>"; };
+		3C3AA8C72A35209C00862651 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3CCE2D262A35AB33009B13BC /* Settings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Settings.swift; sourceTree = "<group>"; };
+		3CCE2D2B2A35AF5B009B13BC /* UserDefaults.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserDefaults.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,6 +41,9 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				3C3AA8B92A35126900862651 /* FirebaseMessaging in Frameworks */,
+				3CCE2D2A2A35AE14009B13BC /* JGProgressHUD in Frameworks */,
+				3C3AA8B72A35126900862651 /* FirebaseAnalytics in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -56,13 +69,17 @@
 		3C3AA89C2A34D83600862651 /* Mobile Airtime */ = {
 			isa = PBXGroup;
 			children = (
+				3C3AA8BA2A3512F100862651 /* Mobile Airtime.entitlements */,
 				3C3AA89D2A34D83600862651 /* AppDelegate.swift */,
 				3C3AA89F2A34D83600862651 /* SceneDelegate.swift */,
 				3C3AA8A12A34D83600862651 /* ViewController.swift */,
 				3C3AA8A32A34D83600862651 /* Main.storyboard */,
+				3C3AA8C72A35209C00862651 /* GoogleService-Info.plist */,
 				3C3AA8A62A34D83800862651 /* Assets.xcassets */,
 				3C3AA8A82A34D83800862651 /* LaunchScreen.storyboard */,
 				3C3AA8AB2A34D83800862651 /* Info.plist */,
+				3CCE2D262A35AB33009B13BC /* Settings.swift */,
+				3CCE2D2B2A35AF5B009B13BC /* UserDefaults.swift */,
 			);
 			path = "Mobile Airtime";
 			sourceTree = "<group>";
@@ -83,6 +100,11 @@
 			dependencies = (
 			);
 			name = "Mobile Airtime";
+			packageProductDependencies = (
+				3C3AA8B62A35126900862651 /* FirebaseAnalytics */,
+				3C3AA8B82A35126900862651 /* FirebaseMessaging */,
+				3CCE2D292A35AE14009B13BC /* JGProgressHUD */,
+			);
 			productName = "Mobile Airtime";
 			productReference = 3C3AA89A2A34D83600862651 /* Mobile Airtime.app */;
 			productType = "com.apple.product-type.application";
@@ -111,6 +133,10 @@
 				Base,
 			);
 			mainGroup = 3C3AA8912A34D83600862651;
+			packageReferences = (
+				3C3AA8B52A35126900862651 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3CCE2D282A35AE14009B13BC /* XCRemoteSwiftPackageReference "JGProgressHUD" */,
+			);
 			productRefGroup = 3C3AA89B2A34D83600862651 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -126,6 +152,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3AA8AA2A34D83800862651 /* LaunchScreen.storyboard in Resources */,
+				3C3AA8C82A35209C00862651 /* GoogleService-Info.plist in Resources */,
 				3C3AA8A72A34D83800862651 /* Assets.xcassets in Resources */,
 				3C3AA8A52A34D83600862651 /* Main.storyboard in Resources */,
 			);
@@ -139,7 +166,9 @@
 			buildActionMask = 2147483647;
 			files = (
 				3C3AA8A22A34D83600862651 /* ViewController.swift in Sources */,
+				3CCE2D2C2A35AF5B009B13BC /* UserDefaults.swift in Sources */,
 				3C3AA89E2A34D83600862651 /* AppDelegate.swift in Sources */,
+				3CCE2D272A35AB33009B13BC /* Settings.swift in Sources */,
 				3C3AA8A02A34D83600862651 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +314,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mobile Airtime/Mobile Airtime.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TDTJJT9YLY;
@@ -293,18 +324,23 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.awemeapp.Mobile-Airtime";
+				PRODUCT_BUNDLE_IDENTIFIER = com.awsmeapps.mobileairtimeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Debug;
 		};
@@ -313,6 +349,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Mobile Airtime/Mobile Airtime.entitlements";
+				CODE_SIGN_IDENTITY = "Apple Development";
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = TDTJJT9YLY;
@@ -321,18 +359,23 @@
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = Main;
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
-				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations = UIInterfaceOrientationPortrait;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown";
+				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				MARKETING_VERSION = 1.0;
-				PRODUCT_BUNDLE_IDENTIFIER = "com.awemeapp.Mobile-Airtime";
+				PRODUCT_BUNDLE_IDENTIFIER = com.awsmeapps.mobileairtimeng;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
+				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
+				SUPPORTS_MACCATALYST = NO;
+				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
 				SWIFT_EMIT_LOC_STRINGS = YES;
 				SWIFT_VERSION = 5.0;
-				TARGETED_DEVICE_FAMILY = "1,2";
+				TARGETED_DEVICE_FAMILY = 1;
 			};
 			name = Release;
 		};
@@ -358,6 +401,43 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		3C3AA8B52A35126900862651 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.0.0;
+			};
+		};
+		3CCE2D282A35AE14009B13BC /* XCRemoteSwiftPackageReference "JGProgressHUD" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/JonasGessner/JGProgressHUD.git";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.0.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		3C3AA8B62A35126900862651 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C3AA8B52A35126900862651 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3C3AA8B82A35126900862651 /* FirebaseMessaging */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3C3AA8B52A35126900862651 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseMessaging;
+		};
+		3CCE2D292A35AE14009B13BC /* JGProgressHUD */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3CCE2D282A35AE14009B13BC /* XCRemoteSwiftPackageReference "JGProgressHUD" */;
+			productName = JGProgressHUD;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 3C3AA8922A34D83600862651 /* Project object */;
 }

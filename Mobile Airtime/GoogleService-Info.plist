@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyAe_EocjgoCWYE_5awg9ls6jzdJVZxE9eg</string>
+	<key>GCM_SENDER_ID</key>
+	<string>447140817545</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.awsmeapps.mobileairtimeng</string>
+	<key>PROJECT_ID</key>
+	<string>mobileairtimeng-ba0e1</string>
+	<key>STORAGE_BUCKET</key>
+	<string>mobileairtimeng-ba0e1.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:447140817545:ios:679d3c053792a746f2f458</string>
+</dict>
+</plist>
