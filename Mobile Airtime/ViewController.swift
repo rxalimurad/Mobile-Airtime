@@ -40,7 +40,11 @@ class ViewController: UIViewController, WKNavigationDelegate , WKUIDelegate{
     
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(animated)
-        autoLogin.isHidden = !(UserDefaults.standard.isBiomaticOn  && !UserDefaults.standard.userName.isEmpty && !UserDefaults.standard.password.isEmpty && webKit.url == URL(string: self.url))
+        if image.isHidden {
+            autoLogin.isHidden = !(UserDefaults.standard.isBiomaticOn  && !UserDefaults.standard.userName.isEmpty && !UserDefaults.standard.password.isEmpty && webKit.url == URL(string: self.url))
+        } else {
+            autoLogin.isHidden = true
+        }
     }
     override func viewDidLoad() {
         autoLogin.isHidden = true
